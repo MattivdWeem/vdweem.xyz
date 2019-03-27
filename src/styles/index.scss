@@ -1,0 +1,185 @@
+$colorBackground: lighten(#ECEEF0, 5%);
+$colorAccent: #83B7C4;
+$colorSecond: #2678B5;
+$colorthird: #475E91;
+$colorMain: #1A2131;
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: $colorMain;
+    background: $colorBackground;
+    background-size: 1px 40px;
+background-position: center;
+background-image: linear-gradient(to bottom, lighten($colorAccent, 35%) 1px, $colorBackground 1px);
+
+    h1, h2, h3, h4, h5, h6 {
+        padding: 0;
+        margin: 0;
+        font-family: 'Merriweather', serif;
+    }
+
+    h1 {
+        color: $colorAccent;
+        font-weight: 200;
+    }
+
+    h2 {
+        font-weight: 100;
+        color: $colorthird;
+        font-size: .8em;
+        width: auto;
+        display: inline-block;
+        padding: 10px 0;
+        max-width: 300px;
+    }
+
+    .content {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        a {
+            color: $colorAccent;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 1px dotted $colorAccent;
+            padding: 0 2px;
+
+            &:hover {
+                background: $colorAccent;
+                color: $colorBackground;
+            }
+        }
+
+        p {
+            font-size: .9em;
+            line-height: 1.6em;
+        }
+
+        .worked {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap:wrap;
+            padding-top: 30px;
+
+            h6 {
+                font-size: 1em;
+                padding: 5px 0;
+            }
+        }
+
+        .card {
+            width: 75%;
+            max-width: 750px;
+
+            .info {
+                margin: 30px 0;
+                background: white;
+                padding:10px 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                box-shadow: 0px 0px 8px rgba(0,0,0,.1);
+
+                span {
+                    display: inline;
+                    font-style: italic;
+                    font-size: inherit;
+                }
+            }
+        }
+
+        span {
+            font-size: .8em;
+            display: block;
+        }
+    }
+
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        h1 {
+            width: 100%;
+            background: white;
+            padding: 0px 5px 0 10px;
+            border-left: 1px dashed $colorAccent;
+            box-shadow: 0px 0px 8px rgba(0,0,0,.01)
+        }
+
+        h2 {
+            padding-left: 10px;
+        }
+
+        .images {
+            padding: 5px;
+            margin: 0  40px 0 0;
+            text-align: center;
+
+            #place {
+                border-radius: 15px;
+                overflow: hidden;
+                width: 120px;
+                min-height:50px;
+                height: auto;
+                transition: all 100ms;
+
+
+                &:hover {
+                    cursor:pointer;
+                    transition: all 300ms;
+                    transform:rotate(-5deg);
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .socials {
+                margin-top: 15px;
+                a {
+                    color: $colorthird;
+                    text-decoration: none;
+                    border: none;
+                }
+            }
+        }
+
+        
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    h1 {
+        margin-top: 20px !important;
+        padding: 10px !important;
+        font-size: 1.4em;
+    }
+    .images {
+        width: 100%;
+        margin:0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+
+        .socials {
+            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+
+    body .content .worked {
+        h6 {
+            padding-top: 30px;
+        }
+    }
+}
