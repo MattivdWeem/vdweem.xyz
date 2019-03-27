@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "hi!",
   "scripts": {
-    "build": "webpack --config webpack/webpack.config.prod.js  --colors",
+    "build": "webpack --config webpack/webpack.config.prod.js  --colors; mv docs/CNAME build/; rm -rf docs ; mv build docs",
     "dev": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
   },
   "keywords": [],
