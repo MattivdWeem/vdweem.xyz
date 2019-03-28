@@ -4,7 +4,9 @@ body {
   background: #fafbfb;
   background-size: 1px 40px;
   background-position: center;
-  background-image: linear-gradient(to bottom, #fcfdfe 1px, #fafbfb 1px); }
+  background-image: linear-gradient(to bottom, #fcfdfe 1px, #fafbfb 1px);
+  margin: 0px;
+  overflow-x: hidden; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     padding: 0;
     margin: 0;
@@ -106,6 +108,14 @@ body {
     margin-top: 20px !important;
     padding: 10px !important;
     font-size: 1.4em; }
+  body .content .card {
+    width: 100%; }
+    body .content .card .head {
+      margin: 20px; }
+    body .content .card .info {
+      box-shadow: none; }
+    body .content .card .worked {
+      margin: 0px 20px 40px 20px; }
   .images {
     width: 100%;
     margin: 0;

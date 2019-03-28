@@ -1,7 +1,5 @@
 import "../styles/index.scss";
 
-console.log("webpack starterkit");
-
 const images = ["1.jpg", "2.jpg", "3.jpg", "4.png"];
 const random = items => items[Math.floor(Math.random() * items.length)];
 
